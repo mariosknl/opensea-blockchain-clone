@@ -47,6 +47,7 @@ const Collection = () => {
       provider.getSigner(),
       'https://eth-rinkeby.alchemyapi.io/v2/3uShEcVXT7-OaJqJD7P6v-25wjfR33CX'
     )
+    return sdk.getNFTModule(collectionId)
   })
 
   useEffect(() => {
@@ -117,6 +118,100 @@ const Collection = () => {
           }
           alt="banner"
         />
+      </div>
+      <div className={style.infoContainer}>
+        <div className={style.midRow}>
+          <img
+            className={style.profileImg}
+            src={
+              collection?.imageUrl
+                ? collection.imageUrl
+                : 'https://via.placeholder.com/200'
+            }
+            alt="profile image"
+          />
+        </div>
+        <div className={style.endRow}>
+          <div className={style.socialIconsContainer}>
+            <div className={style.socialIconsWrapper}>
+              <div className={style.socialIconsContent}>
+                <div className={style.socialIcon}>
+                  <CgWebsite />
+                </div>
+                <div className={style.divider} />
+                <div className={style.socialIcon}>
+                  <AiOutlineInstagram />
+                </div>
+                <div className={style.divider} />
+                <div className={style.socialIcon}>
+                  <AiOutlineTwitter />
+                </div>
+                <div className={style.divider} />
+                <div className={style.socialIcon}>
+                  <HiDotsVertical />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={style.midRow}>
+        <div className={style.title}>{collection?.title}</div>
+      </div>
+      <div className={style.midRow}>
+        <div className={style.createdBy}>
+          Created By{' '}
+          <span className="text-[#2081e2]">{collection?.creator}</span>
+        </div>
+      </div>
+      <div className={style.midRow}>
+        <div className={style.statsContainer}>
+          <div className={style.collectionStat}>
+            <div className={style.statValue}>{nfts.length}</div>
+            <div className={style.statName}>items</div>
+          </div>
+          <div className={style.collectionStat}>
+            <div className={style.statValue}>
+              {collection?.allOwners ? collection.allOwners.length : ''}
+            </div>
+            <div className={style.statName}>owners</div>
+          </div>
+          <div className={style.collectionStat}>
+            <div className={style.statValue}>
+              <img
+                className={style.ethLogo}
+                src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"
+                alt="eth"
+              />
+              {collection?.floorPrice}
+            </div>
+            <div className={style.statName}>floor price</div>
+          </div>
+          <div className={style.collectionStat}>
+            <div className={style.statValue}>
+              <img
+                className={style.ethLogo}
+                src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"
+                alt="eth"
+              />
+              {collection?.volumeTraded}.5k
+            </div>
+            <div className={style.statName}>volume traded</div>
+          </div>
+        </div>
+      </div>
+      <div className={style.midRow}>
+        <div className={style.description}>{collection?.description}</div>
+      </div>
+      <div className="flex flex-wrap">
+        {nfts.map((nftItem, id) => (
+          <NFTCard
+            key={id}
+            nftItem={nftItem}
+            title={collection?.title}
+            listings={listings}
+          />
+        ))}
       </div>
     </div>
   )
