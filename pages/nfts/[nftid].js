@@ -25,10 +25,7 @@ const Nft = () => {
   const nftModule = useMemo(() => {
     if (!provider) return
 
-    const sdk = new ThirdwebSDK(
-      provider.getSigner(),
-      'https://eth-rinkeby.alchemyapi.io/v2/3uShEcVXT7-OaJqJD7P6v-25wjfR33CX'
-    )
+    const sdk = new ThirdwebSDK(provider.getSigner())
     return sdk.getNFTModule('0x49948C4552539C654338bE59521fF27bC0fF16C9')
   }, [provider])
 
@@ -46,10 +43,7 @@ const Nft = () => {
   const marketPlaceModule = useMemo(() => {
     if (!provider) return
 
-    const sdk = new ThirdwebSDK(
-      provider.getSigner(),
-      'https://eth-rinkeby.alchemyapi.io/v2/3uShEcVXT7-OaJqJD7P6v-25wjfR33CX'
-    )
+    const sdk = new ThirdwebSDK(provider.getSigner())
     return sdk.getMarketModule('0x49948C4552539C654338bE59521fF27bC0fF16C9')
   }, [provider])
 
