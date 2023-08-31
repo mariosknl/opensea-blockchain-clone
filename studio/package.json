@@ -14,7 +14,7 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/eslint-config-studio": "3.0.0",
+    "@sanity/eslint-config-studio": "3.0.1",
     "@sanity/base": "2.36.2",
     "@sanity/core": "2.36.2",
     "@sanity/default-layout": "2.36.2",
