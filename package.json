@@ -8,16 +8,16 @@
   "dependencies": {
     "@3rdweb/hooks": "1.9.2",
     "@3rdweb/sdk": "1.42.1",
-    "@sanity/client": "6.4.9",
+    "@sanity/client": "6.4.12",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "2.4.1",
-    "react-icons": "4.10.1"
+    "react-icons": "4.11.0"
   },
   "devDependencies": {
     "@types/react": "18.2.23",
-    "@types/node": "18.17.14",
+    "@types/node": "18.18.1",
     "postcss": "8.4.29",
     "autoprefixer": "10.4.15",
     "prettier": "3.0.3",
