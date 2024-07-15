@@ -18,7 +18,7 @@
   "devDependencies": {
     "@types/react": "18.3.3",
     "@types/node": "20.14.10",
-    "postcss": "8.4.38",
+    "postcss": "8.4.39",
     "prettier": "3.3.2",
     "autoprefixer": "10.4.19",
     "prettier-plugin-tailwindcss": "0.6.5",
