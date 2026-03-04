@@ -21,7 +21,7 @@
     "postcss": "8.5.8",
     "prettier": "3.8.1",
     "prettier-plugin-tailwindcss": "0.7.2",
-    "autoprefixer": "10.4.24",
+    "autoprefixer": "10.4.27",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3"
   }
