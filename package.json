@@ -16,7 +16,7 @@
     "react-icons": "5.7.0"
   },
   "devDependencies": {
-    "@types/react": "18.3.31",
+    "@types/react": "19.2.17",
     "@types/node": "24.13.3",
     "postcss": "8.5.16",
     "prettier": "3.9.4",
